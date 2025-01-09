@@ -10,32 +10,31 @@ La carpeta `visual-pde-main` hace referencia al front-end del proyecto. Para lev
 
 ---
 
-**1. Compila el contenedor de Docker:** 
-
-    docker-compose build
-
+**1. Compila el contenedor de Docker:**
+```bash
+docker-compose build
+```
 
 ---
 
 **2. Levanta el contenedor:**
- 
-    docker-compose up
- 
-
- 
-
-**Si ocurre algún error, asegúrate de hacer un pull de la imagen correcta de Ruby:**
- 
-  docker pull ruby:3.1
- 
- Esto se debe a que la versión 3.1 de Ruby es necesaria para las librerías utilizadas.
+```bash
+docker-compose up
+```
 
 ---
 
-## *********************************************  Back-end  ***********************************************************
+**Si ocurre algún error, asegúrate de hacer un pull de la imagen correcta de Ruby:**
+```bash
+docker pull ruby:3.1
+```
+Esto se debe a que la versión 3.1 de Ruby es necesaria para las librerías utilizadas.
 
-La carpeta `funcional` hace referencia al back-end del proyecto. Esta parte no tiene una estructura de aplicación completa, sino que está diseñada como una **API**,
-y será levantada con un intérprete de Python en lugar de opciones como Flask.
+---
+
+## Back-end
+
+La carpeta `funcional` hace referencia al back-end del proyecto. Esta parte no tiene una estructura de aplicación completa, sino que está diseñada como una **API**, y será levantada con un intérprete de Python en lugar de opciones como Flask.
 
 ---
 
@@ -79,20 +78,22 @@ Controla el número de descargas de una imagen y gestiona la lista de imágenes 
 **2. Clase `ImagenesSentinel`:**  
 Se encarga de buscar y descargar imágenes satelitales.  
 
-2.1 Respecto a una fecha dada, busca imágenes de manera descendente.  
-2.2 La primera imagen seleccionada se utilizará junto con el tiempo de simulación.  
-2.3 **(FALTA)** Seleccionar la imagen `c1` para calcular el coeficiente de difusión.  
-2.4 **(FALTA)** Cambios simples en desarrollo para descargar las imágenes satelitales `c1` y `c0`.
+- Respecto a una fecha dada, busca imágenes de manera descendente.  
+- La primera imagen seleccionada se utilizará junto con el tiempo de simulación.  
+- **(FALTA)** Seleccionar la imagen `c1` para calcular el coeficiente de difusión.  
+- **(FALTA)** Cambios simples en desarrollo para descargar las imágenes satelitales `c1` y `c0`.
 
 ---
 
 **3. Procesamiento con Acolite:**  
- 3.1 Aplicamos el algoritmo de Mishra para estimar la materia orgánica en el agua.  
+Aplicamos el algoritmo de Mishra para estimar la materia orgánica en el agua.  
 
+---
 
 **4. Clase `Simulacion` (nombre tentativo):**  
- 4.1Organiza las imágenes en carpetas y por fechas.  
+Organiza las imágenes en carpetas y por fechas.  
 
+---
 
 **5. Procesamiento con Matlab:**  
 Utilizando un paquete para analizar imágenes, desplegamos un Docker con scripts que:  
@@ -100,7 +101,7 @@ Utilizando un paquete para analizar imágenes, desplegamos un Docker con scripts
 - Separan el fondo del área con agua.  
 - Calculan el coeficiente de difusión usando `c0` y `c1`.  
 
- 
+---
 
 **6. Integración (en desarrollo):**  
 - **(FALTA)** Conectar la respuesta del back-end con el front-end tras estas iteraciones.  
@@ -111,5 +112,3 @@ Utilizando un paquete para analizar imágenes, desplegamos un Docker con scripts
 ## Repositorio Original
 
 **El front-end mantiene todos los archivos originarios del proyecto Visual-PDE.**
-
-      https://github.com/Pecnut/visual-pde
