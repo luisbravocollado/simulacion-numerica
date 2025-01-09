@@ -2,8 +2,8 @@ import os
 import subprocess
 from models.muestras import Muestras
 class Matlab:
-    def __init__(self,muestra):
-        current_dir = self.muestra.ubicacion
+    def __init__(self,muestra:Muestras):
+        current_dir = muestra.ubicacion
         self.output_dir =os.path.join(current_dir, 'simulacion') 
 
     def crear_archivo_procesar_imagenes(self):
