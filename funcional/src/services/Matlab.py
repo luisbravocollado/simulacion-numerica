@@ -2,8 +2,9 @@ import os
 import subprocess
 
 class Matlab:
-    def __init__(self, output_dir):
-        self.output_dir = output_dir
+    def __init__(self):
+        current_dir = self.muestra.ubicacion
+        self.output_dir =os.path.join(current_dir, 'simulacion') 
 
     def crear_archivo_procesar_imagenes(self):
         """

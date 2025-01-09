@@ -158,8 +158,7 @@ def simulacion():
 def matlab():
     global madrid_muestra
     try:
-        output_dir = r"C:\\Users\\Luisbra\\Desktop\\funcional\\simulacion"
-        matlab_instance = Matlab(output_dir)
+        matlab_instance = Matlab()
         matlab_instance.crear_archivo_procesar_imagenes()
         matlab_instance.crear_archivo_transparencia()
 
