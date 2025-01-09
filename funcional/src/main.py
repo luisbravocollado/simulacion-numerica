@@ -158,7 +158,7 @@ def simulacion():
 def matlab():
     global madrid_muestra
     try:
-        matlab_instance = Matlab()
+        matlab_instance = Matlab(madrid_muestra)
         matlab_instance.crear_archivo_procesar_imagenes()
         matlab_instance.crear_archivo_transparencia()
 

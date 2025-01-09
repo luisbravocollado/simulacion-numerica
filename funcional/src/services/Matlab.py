@@ -2,7 +2,7 @@ import os
 import subprocess
 from models.muestras import Muestras
 class Matlab:
-    def __init__(self,Muestras:muestra):
+    def __init__(self,muestra):
         current_dir = self.muestra.ubicacion
         self.output_dir =os.path.join(current_dir, 'simulacion') 
 
