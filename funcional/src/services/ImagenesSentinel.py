@@ -133,6 +133,9 @@ class ImagenesSentinel:
                     os.makedirs(extract_dir, exist_ok=True)
                     zip_ref.extractall(extract_dir)
                 print(f"Archivo {product_name}.zip descomprimido en {extract_dir}")
+                if not self.muestra.pruebas:
+                    # Si es True, solo descomprimir 
+                    os.remove(zip_file_path)
 
             except:
                 print(f"Error: {product_name}.zip no es un archivo válido. Moviéndolo a la carpeta 'error'.")

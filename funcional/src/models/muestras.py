@@ -5,6 +5,7 @@ from pyproj import Proj, Transformer
 import traceback  # Opcional para imprimir errores  
 class Muestras:
     def __init__(self, utmX:None, utmY:None,polygono:None ,timeZone:None, firstImage):
+        self.pruebas=False
         self.firstImage = firstImage
         self.cantidad = 1
         self.distance = 5000

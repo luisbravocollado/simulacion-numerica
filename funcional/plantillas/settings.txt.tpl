@@ -107,7 +107,8 @@ blackfill_skip=True
 blackfill_max=1.0
 blackfill_wave=1600
 output_bt=False
-l2w_parameters=tur_nechad2009ave,spm_nechad2010,spm_nechad2010ave,tur_nechad2009,tur_nechad2016,tur_dogliotti2015,tur_novoa2017,spm_novoa2017,chl_oc2,chl_oc3,chl_re_gons,chl_re_gons740,chl_re_moses3b,chl_re_moses3b740,chl_re_mishra,ndci,chl_re_bramich,ndvi,ndvi_rhot,CDOM_SAICA_mean,CDOM_DG_SAICA_mean
+l2w_parameters=reproject_projection_resampling_method=bilinear,elevation=1000,map_dpi=90000,rhos_*,rhow_*,Rrs_*,tur_nechad2009ave,spm_nechad2010,spm_nechad2010ave,tur_nechad2009,tur_nechad2016,tur_dogliotti2015,tur_novoa2017,spm_novoa2017,chl_oc2,chl_oc3,chl_re_gons,chl_re_gons740,chl_re_moses3b,chl_re_moses3b740,chl_re_mishra,ndci,chl_re_bramich,ndvi,ndvi_rhot,CDOM_SAICA_mean,CDOM_DG_SAICA_mean,l2w_mask_water_parameters=True,l2r_export_geotiff=True,l2w_export_geotiff=True,export_cloud_optimized_geotiff=True,l2r_export_geotiff_rgb=True,l1r_delete_netcdf=True,l2r_delete_netcdf=True,l2w_delete_netcdf=True,rgb_rhow=True,merge_tiles=True,map_l2w=True,s2_target_res=10
+
 l2w_mask=True
 l2w_mask_wave=1600
 l2w_mask_threshold=0.0215

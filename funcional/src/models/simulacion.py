@@ -41,7 +41,11 @@ class Simulacion:
                         archivo_destino = os.path.join(ruta_destino, archivo)
 
                         if os.path.exists(archivo_origen):
-                            shutil.move(archivo_origen, archivo_destino)
+                            if(not self.muestra.pruebas):
+                                shutil.move(archivo_origen, archivo_destino)
+                            else :
+                                shutil.copy()
+
                             archivos_movidos.append(archivo)
                             print(f"Archivo {archivo} movido a: {archivo_destino}")
 

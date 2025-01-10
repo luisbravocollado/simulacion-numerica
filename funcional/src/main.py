@@ -6,7 +6,7 @@ from models.simulacion import Simulacion
 from services.ImagenesSentinel import ImagenesSentinel
 from services.Acolite import Acolite
 from services.Matlab import Matlab
-
+import os
 app = Flask(__name__)
 CORS(app)  # Habilitar CORS para todas las rutas
 
@@ -158,7 +158,7 @@ def simulacion():
 def matlab():
     global madrid_muestra
     try:
-        matlab_instance = Matlab(madrid_muestra)
+        matlab_instance = Matlab(os.path.join(madrid_muestra.ubicacion,'simulacion'))
         matlab_instance.crear_archivo_procesar_imagenes()
         matlab_instance.crear_archivo_transparencia()
 
